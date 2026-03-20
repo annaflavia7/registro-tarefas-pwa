@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h2>Sobre o aplicativo</h2>
+    <h2>Sobre o aplicativo.</h2>
     <p>
       Este é um gerenciador de tarefas desenvolvido como Progressive Web App
       (PWA) utilizando Vue.js 3 e Vite.
