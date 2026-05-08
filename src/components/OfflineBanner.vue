@@ -5,23 +5,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { useOnlineStatus } from '../composables/useOnlineStatus';
 
-const isOnline = ref(navigator.onLine);
-
-function updateOnlineStatus() {
-  isOnline.value = navigator.onLine;
-}
-
-onMounted(() => {
-  window.addEventListener('online', updateOnlineStatus);
-  window.addEventListener('offline', updateOnlineStatus);
-});
-
-onUnmounted(() => {
-  window.removeEventListener('online', updateOnlineStatus);
-  window.removeEventListener('offline', updateOnlineStatus);
-});
+const { isOnline } = useOnlineStatus();
 </script>
 
 <style scoped>

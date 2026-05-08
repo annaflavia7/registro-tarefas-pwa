@@ -28,13 +28,14 @@
       Nenhuma tarefa cadastrada. Adicione uma acima.
     </p>
   </div>
+    <InstallButton />
 </template>
 
 <script setup>
 import TaskForm from '../components/TaskForm.vue';
 import TaskItem from '../components/TaskItem.vue';
 import { useTasks } from '../composables/useTasks';
-
+import InstallButton from '../components/InstallButton.vue';
 const { tasks, pendingTasks, completedTasks, addTask, toggleTask, removeTask } =
   useTasks();
 </script>
